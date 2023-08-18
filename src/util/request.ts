@@ -10,7 +10,7 @@ export class Request {
 
   constructor(private request = axios) {}
 
-  public get<T>(url: string, config: RequestConfig = {}): Promise<Response<T>> {
+  public async get<T>(url: string, config: RequestConfig = {}): Promise<Response<T>> {
     return this.request.get<T, Response<T>>(url, config)
   }
 
